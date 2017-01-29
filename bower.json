@@ -1,0 +1,32 @@
+{
+  "name": "angular-web-site",
+  "description": "Web Site Learning",
+  "main": "gulpfile.js",
+  "authors": [
+    "Marcos Brito",
+    "Domaris Campos"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "learning",
+    "angular"
+  ],
+  "homepage": "https://github.com/marcospsbrito/angular-web-site",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-animate": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "jquery": "^3.1.1",
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}
