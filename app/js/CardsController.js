@@ -1,5 +1,5 @@
 angular.
-  module('PortifolioApp').controller('CardsController', function() {
+  module('PortifolioApp').controller('CardsController', function($scope) {
       var ctrl = this;
       ctrl.cards = [{
         image:'images/example-work01.jpg',
@@ -13,4 +13,11 @@ angular.
         content:'asdfuashdfa sadfh ua asdfsdf asuhdf asdfh uasdf',
         link:'teste 2'
       }];
+
+      var _adicionarCard = function (){
+        ctrl.cards.push(angular.copy($scope.cardForm));
+        delete($scope.cardForm);
+      }
+
+      this.adicionarCard = _adicionarCard;
     });

@@ -11,6 +11,10 @@
           templateUrl: '/views/cards.html',
           controller: 'CardsController',
           controllerAs:'cardCtlr'
+        }).when("/card/cadastro", {
+          templateUrl: '/views/card-crud.html',
+          controller: 'CardsController',
+          controllerAs:'cardCtlr'
         })
         .when("/contato", {
           templateUrl: '/views/contact.html',
