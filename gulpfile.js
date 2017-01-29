@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
-
+var browserSync = require('browser-sync').create();
 
 gulp.task('connect', function() {
   connect.server({
@@ -24,5 +24,21 @@ gulp.task('sass', function(){
 gulp.task('watch', function () {
   gulp.watch(['./app/*.html'], ['html']);
 });
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
 
-gulp.task('default', ['sass','connect', 'watch']);
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+
+gulp.task('default', ['sass', 'connect', 'watch', 'browser-sync']);
