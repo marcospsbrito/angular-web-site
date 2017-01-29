@@ -8,12 +8,12 @@
       // routes
       $routeProvider
         .when("/", {
-          templateUrl: '/views/cards.html',
+          templateUrl: '/html/views/cards.html',
           controller: 'CardsController',
           controllerAs:'cardCtlr'
         })
         .when("/contato", {
-          templateUrl: '/views/contact.html',
+          templateUrl: '/html/views/contact.html',
           controller: 'ContactController',
           controllerAs: 'contactCtlr'
         })
