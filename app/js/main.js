@@ -10,8 +10,8 @@
       // routes
       $routeProvider
         .when("/", {
-          templateUrl: '/partials/card_template.html',
-          controller: 'CardController',
+          templateUrl: '/views/cards.html',
+          controller: 'CardsController',
           controllerAs:'cardCtlr'
         })
         .otherwise({
