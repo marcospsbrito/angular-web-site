@@ -1,11 +1,8 @@
 (function () {
 
-'use strict';
+  var app = angular.module('PortifolioApp', ['ngRoute']);
 
-
-  angular.module('PortifolioApp', ['ngRoute'])
-
-  .config([
+  app.config([
     '$locationProvider',
     '$routeProvider',
     function($locationProvider, $routeProvider) {
@@ -13,33 +10,13 @@
       // routes
       $routeProvider
         .when("/", {
-          templateUrl: './partials/card.html',
+          templateUrl: '/partials/card_template.html',
           controller: 'CardController',
-          controllerAs: 'cardCtrl'
+          controllerAs:'cardCtlr'
         })
         .otherwise({
            redirectTo: '/'
         });
     }
   ]);
-
-  //Load controller
-  angular.module('PortifolioApp')
-
-  .controller('CardController', function() {
-      this.cards = [{
-        image:'/app/images/example-blog01.jpg',
-        title:'Teste 01',
-        content:'asdfuashdfa sadfh uasdf asuhdf asdfh uasdf',
-        link:'teste'
-      },
-      {
-        image:'/app/images/example-blog02.jpg',
-        title:'Teste 02',
-        content:'asdfuashdfa sadfh uasdf asuhasfd df asdfh uasdf',
-        link:'teste'
-      }];
-      console.log(this.cards);
-    });
-
-}());
+})();
