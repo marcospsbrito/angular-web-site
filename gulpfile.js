@@ -1,5 +1,7 @@
-var gulp = require('gulp'),
-  connect = require('gulp-connect');
+var gulp = require('gulp');
+var connect = require('gulp-connect');
+var sass = require('gulp-sass');
+
 
 gulp.task('connect', function() {
   connect.server({
@@ -13,8 +15,14 @@ gulp.task('html', function () {
     .pipe(connect.reload());
 });
 
+gulp.task('sass', function(){
+  return gulp.src('app/scss/*.scss')
+    .pipe(sass()) // Using gulp-sass
+    .pipe(gulp.dest('app/css'))
+});
+
 gulp.task('watch', function () {
   gulp.watch(['./app/*.html'], ['html']);
 });
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['sass','connect', 'watch']);
