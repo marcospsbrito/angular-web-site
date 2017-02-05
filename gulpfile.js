@@ -56,10 +56,7 @@ gulp.task('minify-js', function() {
     }))
     .pipe(gulp.dest('./dist/'))
 });
-gulp.task('copy-bower-components', function () {
-  gulp.src('./app/bower_components/**')
-    .pipe(gulp.dest('dist/bower_components'));
-});
+
 gulp.task('copy-html-files', function () {
   gulp.src('./app/**/*.html')
     .pipe(gulp.dest('dist/'));
@@ -88,6 +85,6 @@ gulp.task('default', ['sass', 'connect', 'watch', 'browser-sync']);
 gulp.task('build', function() {
   runSequence(
     ['clean'],
-    ['lint', 'minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'copy-img-files', 'connectDist']
+    ['lint', 'minify-css', 'minify-js', 'copy-html-files',  'copy-img-files', 'connectDist']
   );
 });
