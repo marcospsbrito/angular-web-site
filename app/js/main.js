@@ -1,6 +1,6 @@
 (function () {
 
-  var app = angular.module('PortifolioApp', ['ngRoute']);
+  var app = angular.module('PortifolioApp', ['ngRoute','ngResource']);
 
   app.config([ '$locationProvider', '$routeProvider',
     function($locationProvider, $routeProvider) {
