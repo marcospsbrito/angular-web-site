@@ -20,7 +20,7 @@
     "url": "https://github.com/marcospsbrito/angular-web-site/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.6",
+    "browser-sync": "^2.18.7",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-connect": "^5.0.0",
